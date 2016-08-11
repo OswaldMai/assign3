@@ -55,8 +55,12 @@ void draw() {
 
     case RUN:
     //background
-    if (bg1_x > width){bg1_x = -640;}
-    if (bg2_x > width){bg2_x = -640;}
+    if (bg1_x > width){
+      bg1_x = -640;
+    }
+    if (bg2_x > width){
+      bg2_x = -640;
+    }
     image(backgroundImg1, bg1_x, 0);
     image(backgroundImg2, bg2_x, 0);
     bg1_x = (bg1_x+1);

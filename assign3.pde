@@ -101,16 +101,16 @@ void draw() {
       //enemy: the third wave
       case T_WAVE:
       for (int i = 0; i<3; i++){
+        image(enemy,enemy_x-i*spacing,enemy_y2-i*spacing);
         image(enemy,enemy_x-i*spacing,enemy_y2+i*spacing);
-        image(enemy,enemy_x+i*spacing,enemy_y2+i*spacing);
-        image(enemy,enemy_x+(2-i)*spacing,enemy_y2+(i+2)*spacing);
-        image(enemy,enemy_x-(2-i)*spacing,enemy_y2+(i+2)*spacing);
+        image(enemy,enemy_x+((i-4)*spacing),enemy_y2-i*spacing);
+        image(enemy,enemy_x+((i-4)*spacing),enemy_y2+i*spacing);
       }
       enemy_x = enemy_x+3;
-      if (enemy_x >780){
+      if (enemy_x >860){
         waveState = F_WAVE;
         enemy_y2 = floor(random(175));
-        enemy_x %=780;
+        enemy_x %=860;
       }
             
       break;

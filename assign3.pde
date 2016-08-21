@@ -31,7 +31,7 @@ void setup () {
   enemy_x = 0;
   enemy_y = floor(random(420));
   enemy_y1 = floor(random(175));
-  enemy_y2 = floor(random(175));
+  enemy_y2 = floor(random(110,310));
   tr_x = floor(random(590));
   tr_y = floor(random(390));
   hpLength = 200;
@@ -109,7 +109,7 @@ void draw() {
       enemy_x = enemy_x+3;
       if (enemy_x >860){
         waveState = F_WAVE;
-        enemy_y2 = floor(random(175));
+        enemy_y2 = floor(random(110,310));
         enemy_x %=860;
       }
             
